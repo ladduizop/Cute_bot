@@ -27,10 +27,10 @@ from .sql_helper.mute_sql import is_muted, mute, unmute
 
 # =================== CONSTANT ===================
 
-PP_TOO_SMOL = "`The image is too small`"
-PP_ERROR = "`Failure while processing the image`"
-NO_ADMIN = "`I am not an admin nub nibba!`"
-NO_PERM = "`I don't have sufficient permissions! This is so sed. Alexa play despacito`"
+PP_TOO_SMOL = "`Choti image hai yaal`"
+PP_ERROR = "`Fail hogya image process krne me`"
+NO_ADMIN = "`Mai admin nahi hu yaal!`"
+NO_PERM = "`Mele paash itni pelmission hi nahi hai yaal`"
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
 INVALID_MEDIA = "`Invalid Extension`"
 
