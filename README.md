@@ -17,12 +17,11 @@ A simple Telegram userbot based on Telethon .
 
 
 
-## How to deploy catuserbot
-### Self host
-  - [check this](https://catuserbot.gitbook.io/catuserbot/tutorial/self-host)
-  
+## How to deploy Cute laddu userbot
+Deploy karna bada easy hai vro youtube pe video daaldunga vro.....
+
 ## Support
-   <a href="https://t.me/catuserbot17"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/Laddu_ka_group"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    <a href="https://t.me/catuserbot_support"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    
 ## Inspiration
