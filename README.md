@@ -21,7 +21,7 @@ A simple Telegram userbot based on Telethon .
 Deploy karna bada easy hai vro youtube pe video daaldunga vro.....
 ### Heroku Deploy
   - [Source Code](https://github.com/ladduizop/Cute_bot)
-  - [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fladduizop%2Fcute_bot&template=https%3A%2F%2Fgithub.com%2Fladduizop%2Fcutebot)
+  - [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fladduizop%2Fcatpack&template=https%3A%2F%2Fgithub.com%2Fladduizop%2Fcatpack)
 ## Support
    <a href="https://t.me/Laddu_ka_group"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    <a href="https://t.me/Laddu_ka_group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
