@@ -5,9 +5,9 @@ from telethon import version
 
 from . import ALIVE_NAME, StartTime, catversion, get_readable_time, mention, reply_id
 
-DEFAULTUSER = ALIVE_NAME or "cat"
-CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ MY BOT IS RUNNING SUCCESSFULLY ✮"
+DEFAULTUSER = ALIVE_NAME or "Laddu"
+LADDU_IMG = Config.ALIVE_PIC
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ LADDU BOT IS CHAL RHA HAI EKDUM MAST ✮"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  ✥ "
 
 
@@ -19,16 +19,16 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
-    if CAT_IMG:
-        cat_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        cat_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
-        cat_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-        cat_caption += f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
-        cat_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-        cat_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
-        cat_caption += f"**{EMOJI} Master:** {mention}\n"
+    if LADDU_IMG:
+        LADDU_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+        LADDU_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
+        LADDU_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
+        LADDU_caption += f"**{EMOJI} LADDUuserbot Version :** `{LADDUversion}`\n"
+        LADDU_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
+        LADDU_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
+        LADDU_caption += f"**{EMOJI} Master:** {mention}\n"
         await alive.client.send_file(
-            alive.chat_id, CAT_IMG, caption=cat_caption, reply_to=reply_to_id
+            alive.chat_id, LADDU_IMG, caption=LADDU_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
@@ -37,7 +37,7 @@ async def amireallyalive(alive):
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
             f"**{EMOJI} Database :** `{check_sgnirts}`\n"
             f"**{EMOJI} Telethon Version :** `{version.__version__}\n`"
-            f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
+            f"**{EMOJI} LADDUuserbot Version :** `{LADDUversion}`\n"
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n",
@@ -51,12 +51,12 @@ async def amireallyalive(alive):
         return
     tgbotusername = Config.TG_BOT_USERNAME
     reply_to_id = await reply_id(alive)
-    cat_caption = f"**Catuserbot is Up and Running**\n"
-    cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Catuserbot Version :** `{catversion}`\n"
-    cat_caption += f"**  -Python Version :** `{python_version()}\n`"
-    cat_caption += f"**  -Master:** {mention}\n"
-    results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
+    LADDU_caption = f"**LADDU BOT ZINDA HAI AUR CHAL BHI RHA HAI**\n"
+    LADDU_caption += f"**  -Telethon version :** `{version.__version__}\n`"
+    LADDU_caption += f"**  -LADDUuserbot Version :** `{LADDUversion}`\n"
+    LADDU_caption += f"**  -Python Version :** `{python_version()}\n`"
+    LADDU_caption += f"**  -Master:** {mention}\n"
+    results = await bot.inline_query(tgbotusername, LADDU_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
 
