@@ -19,10 +19,10 @@ if Config.ANTISPAMBOT_BAN:
             return
         chat = event.chat_id
         user = await event.get_user()
-        catadmin = await is_admin(bot, chat, bot.uid)
-        if not catadmin:
+        LADDUadmin = await is_admin(bot, chat, bot.uid)
+        if not LADDUadmin:
             return
-        catbanned = None
+        LADDUbanned = None
         adder = None
         ignore = None
         if event.user_added:
@@ -42,7 +42,7 @@ if Config.ANTISPAMBOT_BAN:
             catgban = get_gbanuser(user.id)
             if catgban.reason:
                 hmm = await event.reply(
-                    f"[{user.first_name}](tg://user?id={user.id}) was gbanned by you for the reason `{catgban.reason}`"
+                    f"[{user.first_name}](tg://user?id={user.id}) was gbanned by you for the reason `{LADDUgban.reason}`"
                 )
             else:
                 hmm = await event.reply(
@@ -50,21 +50,21 @@ if Config.ANTISPAMBOT_BAN:
                 )
             try:
                 await bot.edit_permissions(chat, user.id, view_messages=False)
-                catbanned = True
+                LADDUbanned = True
             except Exception as e:
                 LOGS.info(e)
-        if spamwatch and not catbanned:
+        if spamwatch and not LADDUbanned:
             ban = spamwatch.get_ban(user.id)
             if ban:
                 hmm = await event.reply(
-                    f"[{user.first_name}](tg://user?id={user.id}) was banned by spamwatch for the reason `{ban.reason}`"
+                    f"[{user.first_name}](tg://user?id={user.id}) was banned by spamwatch for the reason `{LADDU.reason}`"
                 )
                 try:
                     await bot.edit_permissions(chat, user.id, view_messages=False)
-                    catbanned = True
+                    LADDUbanned = True
                 except Exception as e:
                     LOGS.info(e)
-        if not catbanned:
+        if not LADDUbanned:
             try:
                 casurl = "https://api.cas.chat/check?user_id={}".format(user.id)
                 data = get(casurl).json()
@@ -80,10 +80,10 @@ if Config.ANTISPAMBOT_BAN:
                 )
                 try:
                     await bot.edit_permissions(chat, user.id, view_messages=False)
-                    catbanned = True
+                    LADDUbanned = True
                 except Exception as e:
                     LOGS.info(e)
-        if BOTLOG and catbanned:
+        if BOTLOG and LADDUbanned:
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#ANTISPAMBOT\n"
